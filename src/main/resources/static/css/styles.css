@@ -1,0 +1,85 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.wrapper {
+    background-color: white; /* White background for the form */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 400px; /* Fixed width */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333; /* Darker text for better contrast */
+    text-align: center; /* Centered title */
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 90%;
+    padding: 21px 10px 22px 29px; /* Adjusted padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 154px; /* Rounded input corners */
+    transition: border 0.3s; /* Transition effect for input focus */
+}
+
+.input-box input:focus {
+    border-color: #6a11cb; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.input-box i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #aaa; /* Icon color */
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-forgot label {
+    color: #555; /* Darker label text */
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a11cb; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px;
+    transition: background 0.3s; /* Transition for button hover */
+}
+
+.btn:hover {
+    background-color: #2575fc; /* Darker shade on hover */
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #6a11cb; /* Link color */
+}

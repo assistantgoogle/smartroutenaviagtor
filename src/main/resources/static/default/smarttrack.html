@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Track - Enhanced Location Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/temp.css">
+    <link rel="shortcut icon" href="#">
+    
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .header {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .controls input, .controls button {
+            padding: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <h1 class="logo">SMART TRACK</h1>
+            <div class="profile-section">
+                <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt="User Profile Picture" id="userProfileImg">
+                <h3 id="userName">Hi, User</h3>
+            </div>
+            <ul class="components">
+                <li><a href="#" id="liveTrackingButton">Live Tracking</a></li>
+                <li><a href="#" id="trafficToggleButton">Toggle Traffic</a></li>
+                <li><a href="#" id="geofenceToggleButton">Enable Geofence</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Nearby</a>
+                   <div class="dropdown-content">
+    <a href="#" onclick="findNearbyPlaces('restaurant')">Restaurants</a>
+    <a href="#" onclick="findNearbyPlaces('hospital')">Hospitals</a>
+    <a href="#" onclick="findNearbyPlaces('gas_station')">Gas Stations</a>
+</div>
+
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <div class="header">
+                <h2 style="color:grey;">Welcome to Smart Track </h2>
+                <div class="controls">
+                    <input type="text" id="locationSearch" placeholder="Search for a location">
+                    <button onclick="getLocation();" id ="findMyLocationButton">Find My Location</button>
+               <p><strong>Distance:</strong> <span id="distance">--</span></p>
+        <p><strong>Estimated Time:</strong> <span id="time">--</span></p>
+                    
+                </div>
+            </div>
+            <div id="map"></div>
+            <div id="distanceInfo"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP-ftB0OxvEdEb64kJZkBdWFbUELV1KJc&libraries=places,marker&loading=async&callback=initMap" async defer></script>
+    <script src="js/temp.js"></script>
+</body>
+</html>
